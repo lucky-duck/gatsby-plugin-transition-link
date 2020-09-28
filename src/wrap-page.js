@@ -1,6 +1,5 @@
 const React = require('react')
 const TransitionHandler = require('./components/TransitionHandler').default
-const Layout = require('./components/Layout').LayoutComponent
 
 // eslint-disable-next-line react/prop-types,react/display-name
 module.exports = ({ element, props }, pluginOptions) => {
@@ -11,6 +10,8 @@ module.exports = ({ element, props }, pluginOptions) => {
     if (isIgnoredPath) {
         return element;
     }
+
+    const Layout = require('./components/Layout').LayoutComponent
 
 	return (
 		<Layout {...props}>
